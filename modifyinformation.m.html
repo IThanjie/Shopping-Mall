@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1" />
+<title>修改账户信息</title>
+<link rel="stylesheet" type="text/css" href="css/modifyinformation.m.css">
+<link rel="stylesheet" type="text/css" href="css/base.m.css">
+<link rel="apple-touch-icon" href="images/touch-icon-iphone.png"/>
+<script type="text/javascript" src="js/jquery-2.0.3.min.m.js"></script>
+</head>
+<body>
+  <div class="nctouch-home-top fixed-Width">
+    <header id="header" class="transparent">
+      <div class="header-wrap">
+  	     <center>修改账户信息</center>
+         <div class="header-l">
+           <a id="header-nav">
+             <i class="sousuo"onclick="javascript:history.back(-1);"></i>
+           </a>
+         </div>
+      </div>
+    </header>
+  </div>
+
+
+  <div class="headscu">
+    <ul>
+      <!-- <li>
+          <label for="upload" class="youxiang">上传头像</label>
+          <div title="上传头像" class="uploadWallpaperButton">
+            <input size="45" id="idcardPositive" name="pic_1" class="fileField" type="file" >
+          </div>
+      </li> -->
+      <li><label for="realname" class="youxiang">真实姓名</label><span>姜*</span></li>
+      <li><label for="email" class="youxiang">邮箱</label><span>273777793@qq.com</span></li>
+      <li><label for="idcard" class="youxiang">身份证号</label><span>230****631</span></li>
+      <li><label for="mo" class="youxiang">手机号</label><span>136****52</span></li>
+      <li>
+        <label class="youxiang" style="float:left;padding:5px 0px;">所在城市</label>
+        <div class="" style="width:70%;float:left;">
+        <select name="province" class="area" id="area">
+              <option value="0">请选择</option>
+              <option value="2">北京</option>
+              <option value="3">安徽</option>
+              <option value="4">福建</option>
+              <option value="5">甘肃</option>
+              <option value="6">广东</option>
+              <option value="7">广西</option>
+              <option value="8">贵州</option>
+              <option value="9">海南</option>
+              <option value="10">河北</option>
+              <option value="11">河南</option>
+              <option value="12">黑龙江</option>
+              <option value="13">湖北</option>
+              <option value="14">湖南</option>
+              <option value="15">吉林</option>
+              <option value="16">江苏</option>
+              <option value="17">江西</option>
+              <option value="18">辽宁</option>
+              <option value="19">内蒙古</option>
+              <option value="20">宁夏</option>
+              <option value="21">青海</option>
+              <option value="22">山东</option>
+              <option value="23">山西</option>
+              <option value="24">陕西</option>
+              <option value="25">上海</option>
+              <option value="26">四川</option>
+              <option value="27">天津</option>
+              <option value="28">西藏</option>
+              <option value="29">新疆</option>
+              <option value="30">云南</option>
+              <option value="31">浙江</option>
+              <option value="32">重庆</option>
+              <option value="33">香港</option>
+              <option value="34">澳门</option>
+              <option value="35">台湾</option>
+            </select>
+            <select name="city" class="city" id="city">
+                <option value="">请选择</option>
+            </select>
+            </div>
+            <script>
+                $("#area").change(function(){
+                    $.post("/home/user/getcity.html",{'id':$("#area").val()},function(data){
+                        $("#city").empty();
+                        var area=new Option("请选择","");
+                        $("#city").append(area);
+                        if(data.length>0){
+                            for(var i=0;i<data.length;i++){
+                                var option = new Option(data[i]["area_name"], data[i]["area_id"]);
+                                $("#city").append(option);
+                            }
+                        }else{
+                            $("#city").append("<option value='0'>没有相应城市信息</option>");
+                        }
+                    });
+                });
+            </script>
+      </li>
+    </ul>
+  </div>
+  <div class="tips">
+    <p>
+      *如需修改信息，请联系客服人员（400-790-1688）
+    </p>
+  </div>
+  <div class="tel">
+      <a href="tel:400-790-1688" style="color:#FFFFFF;">拨打电话</a>
+  </div>
+
+</body>
+</html>

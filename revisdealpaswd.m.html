@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1" />
+<title>修改交易密码</title>
+<link rel="stylesheet" type="text/css" href="css/revisdealpaswd.m.css">
+<link rel="stylesheet" type="text/css" href="css/base.m.css">
+<link rel="apple-touch-icon" href="images/touch-icon-iphone.png"/>
+<script type="text/javascript" src="js/jquery-2.0.3.min.m.js"></script>
+</head>
+<body>
+  <div class="nctouch-home-top fixed-Width">
+    <header id="header" class="transparent">
+      <div class="header-wrap">
+  	     <center>修改交易密码</center>
+         <div class="header-l">
+           <a id="header-nav">
+             <i class="sousuo"onclick="javascript:history.back(-1);"></i>
+           </a>
+         </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="support_ybc pass_ybc" style="max-width:640px;min-width:240px;width:100%;margin:0 auto;">
+                <div id="tagContent" class="passContent">
+                    <div class="tagContent" id="tagContent1" style="display: block;">
+                        <script>
+                            $("#signupForm").validate({
+                                rules: {
+                                    oldpwd:{
+										required: true,
+                                        rangelength:[6,20]
+                                    },
+                                    pwd:{
+										required: true,
+                                        rangelength:[6,20]
+                                    },
+                                    repwd:{
+                                        rangelength:[6,20],
+                                        equalTo: "#pwd"
+                                    }
+
+                                },
+                                messages: {
+                                    oldpwd:{
+									 	required: "密码不能为空",
+                                        rangelength:"密码长度在6-20个字符之间"
+                                    },
+                                    pwd:{
+									 	required: "密码不能为空",
+                                        rangelength:"密码长度在6-20个字符之间"
+                                    },
+                                    repwd:{
+                                        rangelength:"密码长度在6-20个字符之间",
+                                        equalTo: "两次输入不一样"
+                                    }
+                                },
+                                submitHandler:function(form){
+                                    ajax_submit_form(form)
+                                    return false;
+                                },
+                                invalidHandler: function() {  //不通过回调
+                                    return false;
+                                }
+                            });
+                        </script>
+                        <form method="post" id="PwdtradeForm" jump-url="/home/login/index.html" enctype="multipart/form-data" action="/home/user/updatepwdtrade.html">
+                            <ul class="ybc_con" >
+                                <li>
+                                  <label for="password"></label>
+                                  <input name="oldpwd_b" placeholder="登录密码" type="password">
+                                </li>
+                                <li>
+                                  <label for="buypassword"></label>
+                                  <input name="oldpwdtrade_b" placeholder="交易密码" type="password">
+                                </li>
+                                <li>
+                                  <label for="newword"></label>
+                                  <input name="pwdtrade" id="pwdtrade" placeholder="新交易密码" type="password">
+                                </li>
+                                <li>
+                                  <label for="repeat"></label>
+                                  <input name="repwdtrade" placeholder="重复交易密码" type="password" style="border:none!important;">
+                                </li>
+                                <div style="background-color:#F0F0F0;width:100%;">
+                                    <li style="background:#F0F0F0;width:95%;margin:0 auto;">
+                                      <label for="upload">正面身份证照片</label>
+                                      <br>
+                                      <div title="上传身份证照片" class="uploadWallpaperButton">
+                                        <input size="45" id="idcardPositive" name="pic_1" class="fileField" type="file" style="width:68%;height:100%;float:left;background-color:#FFFFFF;">
+                                      </div>
+                                      <font color="red" size="5px"style="font-size:0.65rem;">如果审核未通过，请联系客服(400-790-1688)</font>
+                                    </li>
+                                </div>
+                              </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div style="max-width: 640px;min-width: 240px;margin: 1rem auto;">
+              <label class="buys"></label>
+              <input class="tijiao" type="submit" name="button" id="button" value="提交"/>
+            </div>
+
+</body>
+</html>

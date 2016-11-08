@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1" />
+<title>人民币交易</title>
+<link rel="stylesheet" type="text/css" href="css/rmbdeal.m.css">
+<link rel="stylesheet" type="text/css" href="css/base.m.css">
+<link rel="apple-touch-icon" href="images/touch-icon-iphone.png"/>
+<script type="text/javascript" src="js/jquery-2.0.3.min.m.js"></script>
+<script type="text/javascript" src="js/rmbdeal.m.js"></script>
+<style type="text/css">
+
+.choosebank input[type="radio"] {
+margin: 3px 3px 0px 5px;
+display: none;
+}
+label {
+padding-left: 24px;
+cursor: pointer;
+background: url(images/123.jpg) no-repeat left top;
+background-size: 52%;
+float: right;
+height: 1rem;
+margin: 29px -9px 0 0;
+width:1rem;
+}
+label.checked {
+background-position: left bottom;
+}
+/*sup { vertical-align:text-top; }*/
+/*sub { vertical-align:text-bottom; }*/
+/*.hidden { display:none; }*/
+</style>
+</head>
+<body>
+  <div class="nctouch-home-top fixed-Width">
+    <header id="header" class="transparent">
+      <div class="header-wrap">
+  	     <center>人民币交易</center>
+         <div class="header-l">
+           <a id="header-nav">
+             <i class="sousuo"onclick="javascript:history.back(-1);"></i>
+           </a>
+         </div>
+         <div class="header-r" id="header-nav">
+       		<a href="accaltnotes.m.html">
+       			<i class="message"></i>
+           </a>
+         </div>
+
+      </div>
+
+    </header>
+  </div>
+
+  <!-- 预留人民币充值接口 -->
+
+<!-- 人民币交易 -->
+<div id="jiaoyi" style="max-width:640px;min-width:240px;width:100%;height:100%;margin:0 auto;">
+  <div class="availfree" >
+    <div class="available">
+      <p id="recharge">人民币充值</p>
+    </div>
+    <div class="freeze">
+      <p id="withdrawscash">人民币提现</p>
+    </div>
+  </div>
+
+  <div class="presentbank" style="position: relative;">
+    <div class="" style="width:95%;height:2.8rem;position: absolute;left: 2.5%;top: 14%;">
+      <div class="presentbank2" style="float:left;">
+        <p id="bank">中国银行</p>
+        <p id="bankid">6222************487</p>
+      </div>
+      <div class="presentbank3" id="presentbank3" style="float:right;"></div>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="base.m.css" media="screen" title="no title">
+  <div style="max-width:640px;min-width:240px;display:inline-block;width:95%;">
+             <table class="my_add" border="0" cellpadding="0" cellspacing="0" style="max-width:640px;min-width:240px;width:106%;">
+                <tbody>
+                  <tr>
+                    <td style="position:relative;">
+                        <i style="display:inline-block;width:20%">提款金额</i>
+                      	<input name="select_bank" id="select_bank" type="hidden" value="191" >
+                        <input style="display:none">
+                        <div style="display:inline-block;width:78%;padding-bottom:0.2rem;border-bottom:1px solid #E8E8E8;">
+                          <input class="sum" name="money" id="money" placeholder="输入金额大于2元" autocomplete="off" type="text" onkeyup="value=value.replace(/[^\d]/g,'');sjdz();" style="width:60.5%;">
+                          <h6 class="choose_one">
+                            <span>可用<strong>99,800.16</strong>元</span>
+                            <span style="float:right;">
+                              <strong id="rmbout_showtips"></strong>
+                            </span>
+                          </h6>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i style="display:inline-block;width:20%">实际到帐</i>
+                      <div style="display:inline-block;width:78%;border-bottom:1px solid #E8E8E8;">
+                        <input class="sum" id="true_daozhang" disabled="disabled" type="text">
+                        <h6 class="choose_one">
+                          <span style="color:#f60;float:right;">手续费0.1%</span>
+                        </h6>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i style="display:inline-block;width:20%">交易密码</i>
+                      <input style="display:none" type="password">
+                      <input class="sum" name="pwdtrade" id="pwdtrade" autocomplete="off" type="password" style="border-bottom:1px solid #E8E8E8;width:76%;">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i style="display:inline-block;width:20%">手&nbsp&nbsp机&nbsp&nbsp号</i>
+                      <input style="display:none" type="password">
+                      <input class="sum" name="pwdtrade" id="pwdtrade" autocomplete="off" type="password" style="border-bottom:1px solid #E8E8E8;width:76%;">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <i style="display:inline-block;width:20%">验&nbsp&nbsp证&nbsp&nbsp码</i>
+
+                      <input style="display:none" type="password">
+                      <div style="display:inline-block;width:78%;padding-bottom:0.1rem;border-bottom:1px solid #E8E8E8;">
+                        <input class="sum" name="code" id="code" autocomplete="off" type="password">
+                        <input class="confirm" value="获取验证码" type="button" id="msgt" data-key="off" onclick="sandPhone()" style="float:right;">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+  </div>
+
+
+  <div class="presbankdime">
+    <div class="presbankdimez" style="padding-top:">
+      <ul>
+        <li>
+          <h4>动态验证码</h4>
+          <div class="input-box" >
+              <input type="text" id="captcha" name="captcha" maxlength="4" size="10" class="inp" autocomplete="off" placeholder="输入图形验证码" oninput="writeClear($(this));">
+              <span class="input-del code"></span>
+              <a href="javascript:void(0)" id="refreshcode" class="code-img"><img border="0" id="codeimage" name="codeimage" style="height:inherit;" src="http://www.egoju.com/mobile/index.php?act=seccode&amp;op=makecode&amp;k=edbeba2e&amp;t=0.7815458655429439"></a>
+              <input type="hidden" id="codekey" name="codekey" value="edbeba2e">
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+
+  <!-- 选择银行卡 -->
+  <div class="flavbank" id="flavbank">
+    <div class="flavbankheader">
+      <p style="float:left;">选择银行卡</p>
+      <a href="flavbank.m.html" id="flavbankheader"></a>
+    </div>
+    <div class="flavbankmenu">
+
+
+
+
+      <div class="choosebank" style="">
+        <label name="nba" class="checked" for="nba">
+          <div class="subordinatebank">
+            <div class="choosebank2" style="">
+              <p id="choosebankbank">中国银行</p>
+              <p id="choosebankbankid">6222************487</p>
+            </div>
+          </div>
+          <input type="radio" value="191" id="bank_id" name="redio" onclick="bank_id()">
+        </label>
+      </div>
+
+
+      <div class="choosebank" >
+        <label name="nba" class="" for="nba">
+          <div class="subordinatebank">
+            <div class="choosebank2" style="">
+              <p id="choosebankbank">中国银行</p>
+              <p id="choosebankbankid">6222************487</p>
+            </div>
+          </div>
+          <input type="radio" value="190" id="bank_id" name="redio" onclick="bank_id()">
+        </label>
+      </div>
+
+      <div class="choosebank">
+        <label name="nba" class="" for="nba">
+          <div class="subordinatebank">
+            <div class="choosebank2" style="">
+              <p id="choosebankbank">中国银行</p>
+              <p id="choosebankbankid">6222************487</p>
+            </div>
+          </div>
+          <input type="radio" value="190" id="bank_id" name="redio" onclick="bank_id()">
+        </label>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+  <div class="tips">
+    <div class="tipsk">
+      <p>
+        <i style="font-weight:500;color:#838383;">温馨提示：</i>银行对公账户下午十五点为结账点，十五点前提现的第二天早上9点-15点到帐，十五点后提现的第三天9点-15点到帐，敬请会员留意。
+      </p>
+    </div>
+  </div>
+  <div style="max-width: 640px;min-width: 240px;margin: 2rem auto;">
+    <input type="button" name="button" class="confirm" id="button" value="立即提现" style="margin: 0 2.5%;"/>
+  </div>
+
+</div>
+  <!-- <script language="javascript" src="js/city.m.js"></script>
+  <form action="" method=post name=form1>
+  <table width=300  border=0 cellspacing="0" cellpadding="1" !bgcolor=#FFFDE6>
+  <tr>
+  <td class="black_con9">
+  <select name="selectp" onChange="selectcityarea('selectp','selectc','form1');">
+  <option value="0" selected>选择省份</option>
+  </select>
+  </td>
+  </tr>
+  <tr>
+  <td class="black_con9">
+  <select name="selectc">
+  <option value="0" selected>选择城市</option>
+  </select>
+  </td>
+  </tr>
+  </table>
+  </form>
+  <script language="javascript">
+  first("selectp","selectc","form1",0,0);
+  </script> -->
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1" />
+<title>个人资料</title>
+<link rel="stylesheet" type="text/css" href="css/personaldata.m.css">
+<link rel="stylesheet" type="text/css" href="css/base.m.css">
+<link rel="apple-touch-icon" href="images/touch-icon-iphone.png"/>
+<script type="text/javascript" src="js/jquery-2.0.3.min.m.js"></script>
+<style type="text/css">
+/*sup { vertical-align:text-top; }*/
+/*sub { vertical-align:text-bottom; }*/
+/*.hidden { display:none; }*/
+</style>
+</head>
+<body>
+  <div class="nctouch-home-top fixed-Width">
+    <header id="header" class="transparent">
+      <div class="header-wrap">
+  	     <center>个人资料</center>
+         <div class="header-l">
+           <a id="header-nav">
+             <i class="sousuo"onclick="javascript:history.back(-1);"></i>
+           </a>
+         </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="" style="max-width:640px;min-width:240px;width:100%;height:100%;margin:0 auto;background:#343843;">
+    <div class="safe_center clear" style="position:relative;">
+      <div>
+        <div class="sc_level">
+            <div class="sc_level_4" style="width:24%;height:45%;display:inline-block;margin: 2.5% 38%;">
+              <img style=" width:100%; height:100%;border-radius:100%;margin:0 auto;" src="images/ulogodefault.jpg">
+            </div>
+        </div>
+      </div>
+
+        <a href="modifyinformation.m.html" style="border-radius:1rem;background:orange;display:inline-block;padding:5px 15px ;font-size:0.8rem;color:#FFFFFF;position:absolute;top:5%;right:2.5%;">修改</a>
+
+      <div>
+        <dl>
+            <dd style="text-align:center;color:#FFFFFF;">deletf15</dd>
+            <dd style="text-align:center;color:#FFFFFF;width:80%;margin: 0 auto;font-size:0.8rem;border-bottom:2px solid #424550;">总资产：￥101300.16</dd>
+            <div style="width:90%;height:20px;margin:0 auto;font-size:0.7rem;padding-bottom:15px;padding-top:5px;color:#8C8C8E;">
+              <dd style="display:inline-block;float:left;width:49.5%;text-align:center;">可用：￥9980000.16</dd>
+              <dd style="display:inline-block;width:1%;">|</dd>
+              <dd style="display:inline-block;float:right;width:49.5%;text-align:center;">冻结：￥1000000</dd>
+            </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="" style="margin:10px auto;background:#FFFFFF;font-size:0.8rem;width: 100%;max-width: 640px;min-width: 240px;">
+    <div style="width:95%;margin: 0 auto;">
+      <dd style="border-bottom:1px solid #F1F1F1;padding:5px 5px;font-size:1rem;">账户信息</dd>
+      <dd style="border-bottom:1px solid #F1F1F1;padding:5px 5px;position:relative;">姓名<br>姜洪松<p class="alpass">已认证</p></dd>
+      <dd style="border-bottom:1px solid #F1F1F1;padding:5px 5px;">邮箱<br>273777793@qq.com</dd>
+      <dd style="padding:5px 5px;">钱包地址<br>72ec11065d4eb9ab78a1792ef10fd2f7</dd>
+    </div>
+  </div>
+
+  <div class="gonggao">
+    <div class="gonggaol" >
+      <p>修改交易密码</p>
+      <i class="gonggaor"></i>
+    </div>
+  </div>
+<div class="tips" style="max-width:640px;min-width:240px;width:80%;height:6rem;margin: 0 auto;display:none;">
+  <div class="" style="text-align:center;background:rgba(0,0,0,0.8);width:100%;height:6rem;border-radius:0.5rem;z-index:2;position: relative;top:-150%">
+    <a href="getpassword.m.html"><p style="color:#FFFFFF;height:2rem;line-height:2rem;border-bottom:1px solid #494949;">忘记密码</p></a>
+    <a href="revisdealpaswd.m.html"><p style="color:#FFFFFF;height:2rem;line-height:2rem;border-bottom:1px solid #494949;">修改密码</p></a>
+    <a class="quxiao"><p style="color:#FFFFFF;height:2rem;line-height:2rem;">取消</p></a>
+  </div>
+</div>
+
+<script type="text/javascript">
+$('.gonggaor').click(function(){
+$(".tips").show();
+});
+$('.quxiao').click(function(){
+$(".tips").hide();
+});
+</script>
+</body>
+</html>

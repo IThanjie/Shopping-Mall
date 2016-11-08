@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1" />
+<title>认购中心</title>
+<link rel="stylesheet" type="text/css" href="css/subscrcen.m.css">
+<link rel="stylesheet" type="text/css" href="css/base.m.css">
+<link rel="apple-touch-icon" href="images/touch-icon-iphone.png"/>
+<script type="text/javascript" src="js/jquery-2.0.3.min.m.js"></script>
+
+</head>
+<body>
+  <div class="nctouch-home-top fixed-Width">
+    <header id="header" class="transparent">
+      <div class="header-wrap">
+  	     <center>认购中心</center>
+         <div class="header-l">
+           <a id="header-nav">
+             <i class="sousuo"onclick="javascript:history.back(-1);"></i>
+           </a>
+         </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="change" style="max-width:640px;min-width:240px;width:100%;margin:0 auto;background:#FFFFFF;text-align:center;">
+    <img src="images/57a5f8eb1d416.png" alt="" style="width:100%;padding: 2rem 0;"/>
+  </div>
+
+  <div style="max-width:640px;min-width:240px;background-color:#FFFFFF;margin:0 auto;">
+    <div class="programinfo programinfo2">
+        <h2 style="border:none;margin-bottom:8px;">易购积分</h2>
+        <h2 style="text-align:left;padding-right:10px;border:none;font-weight:normal;">单价：1.0273元</h2>
+        <form action="/home/zhongchou/run.html" method="post" id="buy_form">
+            <div class="pay-m-1">
+                <p style="border-bottom:2px solid red;">
+                  <ins style="text-align:left;padding-right:10px;">账户余额：</ins>
+                  <span id="myMon">99800.16</span>RMB<a href="/home/user/index.html" class="pay-recharge-btn">充值</a>
+
+                </p>
+                <p style="margin-top:10px;">
+                  <input style="width:70%;background:#F0F0F0;text-align:left;padding-left:0.5rem;" placeholder="购买数量" value="" class="txt-pay-1" id="num" name="num" type="number" onkeyup="sjmoney();">
+                  <span style="font-size:10px;">个(100个起)</span>
+                </p>
+                <p>
+                  <input style="width:70%;background:#F0F0F0;text-align:left;padding-left:0.5rem;" placeholder="购买数量" value="" class="txt-pay-1" id="manjianhou" name="" type="number" onkeyup="sjzfmoney();">
+                  <span style="font-size:10px;">RMB</span>
+                </p>
+            </div>
+            <div class="pay-m-2">
+                <input type="button" class="btn-play-1" id="zhongchourun" onclick="zhongchou();" value="购买">
+            </div>
+        </form>
+  </div>
+  </div>
+
+    <!-- 投资记录 -->
+  <div style="max-width:640px;min-width:240px;background-color:#FFFFFF;margin: 0 auto;">
+    <div class="programinfo programinfo2 jilu">
+        <h2>投资记录</h2>
+        <table style=" width:100%; margin-top:10px;font-size:16px;">
+            <thead>
+              <tr style="background-color:#FFFFFF; color:#A7A7A7;">
+                  <th>次数</th>
+                  <th>金钱</th>
+                  <th>数量</th>
+                  <th>总金额</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr style="">
+                <td>1</td>
+                <td>1.000</td>
+                <td>100</td>
+                <td>100.000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>1.000</td>
+                <td>100</td>
+                <td>100.000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>1.000</td>
+                <td>100</td>
+                <td>100.000</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>1.027</td>
+                <td>14609</td>
+                <td>15003.443</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>1.027</td>
+                <td>14601</td>
+                <td>14995.227</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+</body>
+</html>

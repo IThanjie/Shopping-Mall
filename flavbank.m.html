@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1" />
+<title>添加银行卡</title>
+<link rel="stylesheet" type="text/css" href="css/flavbank.m.css">
+<link rel="stylesheet" type="text/css" href="css/base.m.css">
+<link rel="apple-touch-icon" href="images/touch-icon-iphone.png"/>
+<script type="text/javascript" src="js/jquery-2.0.3.min.m.js"></script>
+<style type="text/css">
+/*sup { vertical-align:text-top; }*/
+/*sub { vertical-align:text-bottom; }*/
+/*.hidden { display:none; }*/
+</style>
+</head>
+<body>
+  <div class="nctouch-home-top fixed-Width">
+    <header id="header" class="transparent">
+      <div class="header-wrap">
+  	     <center>添加银行卡</center>
+         <div class="header-l">
+           <a id="header-nav">
+             <i class="sousuo"onclick="javascript:history.back(-1);"></i>
+           </a>
+         </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- 内容 -->
+  <div class="tips" style="max-width:640px;min-width:240px;width:95%;height:2rem;margin:0 auto;background:#FFFFFF;border-bottom:1px solid #E8E8E8;">
+    <p style="font-size:0.65rem;color:red;line-height:2rem;">
+      友情提示：最多添加10条提款地址
+    </p>
+  </div>
+  <table id="addNewAddr" class="add_list" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;border-spacing: 0;width:95%;height:10rem;background:#FFFFFF;">
+          <tbody style="display: table-row-group;vertical-align: middle;border-color: inherit;">
+            <tr style="display: table-row;vertical-align: inherit;border-color: inherit;">
+             <form action="/home/user/insert.html" method="post" id="bankform" jump-url="/home/user/draw.html" novalidate="novalidate">
+             </form>
+              <td colspan="4" id="newAddress" style="">
+                <div id="rmb_out_ok" style="display: block;">
+                    <ul class="ybc_con" id="rollout" style="margin-top:10px;">
+                      <li>
+                        <a>持卡人姓名</a>
+                        <input name="name" id="name" value="" class="loginValue" disabled="disabled" type="text" style="border-bottom:1px solid #E8E8E8;float:right;">
+
+                        <!-- <span class="false" id="accountmsg">与实名认证信息一致不可修改</span>  -->
+                      </li>
+                      <li>
+                        <a>开户行</a>
+                        <select name="bank" id="bank" class="loginValue" style="width:76%;border:none;border-bottom:1px solid #E8E8E8!important;padding:0 0 0.3rem 0;float:right;">
+                          <option selected="selected" value="" style="display:inline-block;">请选择银行</option>
+                          <option>工商银行</option>
+                          <option>建设银行</option>
+                          <option>农业银行</option>
+                          <option>中国邮政储蓄银行</option>
+                          <option>交通银行</option>
+                          <option>中国银行</option>
+                          <option>光大银行</option>
+                          <option>中信银行</option>
+                          <option>招商银行</option>
+                          <option>民生银行</option>
+                          <option>兴业银行</option>
+                          <option>平安银行</option>
+                          <option>广发银行</option>
+                          <option>北京银行</option>
+                          <option>华夏银行</option>
+                          <option>上海浦东发展银行</option>
+                          <option>渤海银行</option>
+                          <option>浙商银行</option>
+                          <option>宁波银行</option>
+                          <option>恒丰银行</option>
+                          <option>中国农业发展银行</option>
+                        </select>
+                        <span class="rePWB" id="bankmsg"></span>
+                      </li>
+                      <li>
+                        <a>开户地址</a>
+                        <div style="display:inline-block;width:75%;float:right;border-bottom:1px solid #E8E8E8;padding-bottom:0.5rem;">
+                        <select id="p1" style="width:50%;float:left;border:none;">
+                          <option selected="selected" value="">省份</option>
+                          <option value="2">
+                            北京                              </option><option value="3">
+                            安徽                              </option><option value="4">
+                            福建                              </option><option value="5">
+                            甘肃                              </option><option value="6">
+                            广东                              </option><option value="7">
+                            广西                              </option><option value="8">
+                            贵州                              </option><option value="9">
+                            海南                              </option><option value="10">
+                            河北                              </option><option value="11">
+                            河南                              </option><option value="12">
+                            黑龙江                              </option><option value="13">
+                            湖北                              </option><option value="14">
+                            湖南                              </option><option value="15">
+                            吉林                              </option><option value="16">
+                            江苏                              </option><option value="17">
+                            江西                              </option><option value="18">
+                            辽宁                              </option><option value="19">
+                            内蒙古                              </option><option value="20">
+                            宁夏                              </option><option value="21">
+                            青海                              </option><option value="22">
+                            山东                              </option><option value="23">
+                            山西                              </option><option value="24">
+                            陕西                              </option><option value="25">
+                            上海                              </option><option value="26">
+                            四川                              </option><option value="27">
+                            天津                              </option><option value="28">
+                            西藏                              </option><option value="29">
+                            新疆                              </option><option value="30">
+                            云南                              </option><option value="31">
+                            浙江                              </option><option value="32">
+                            重庆                              </option><option value="33">
+                            香港                              </option><option value="34">
+                            澳门                              </option><option value="35">
+                            台湾                              </option><option value="3426">
+                            www                              </option>                          </select>
+                        <select id="c1" style="width:50%;float:right;border:none;" onchange="city();">
+                          <option selected="selected" value="" >城市</option>
+                        </select>
+                        </div>
+                        <input type="hidden" name="shi" id="shi">
+                      <li>
+                        <a>开户行全称</a>
+                        <input name="kaihuhang" id="kaihuhang" class="loginValue" style="font-size:14px;font-weight:bold;color:#f60;border-bottom:1px solid #E8E8E8;float:right;" type="text">
+
+                      <li>
+                        <a>银行卡卡号</a>
+                        <input onkeyup="value=value.replace(/[^\d]/g,'')" name="account" id="account" class="loginValue" style="font-size:14px;font-weight:bold;color:#f60;border-bottom:1px solid #E8E8E8;float:right;" type="text">
+                        <span class="false" id="accountmsg" style="color:#f00;"></span>
+                      </li>
+                      <li id="yes_add" style="border-bottom:none;height:0;">
+                        <script>
+                          function city(){
+                            $("#shi").val($("#c1").val());
+                          }
+                          $("#p1").change(function(){
+                          $.post("/home/user/getcity.html",{'id':$("#p1").val()},function(data){
+                            $("#c1").empty();
+                            var area=new Option("请选择","");
+                            $("#c1").append(area);
+                            if(data.length>0){
+                              for(var i=0;i<data.length;i++){
+                                var option = new Option(data[i]["area_name"], data[i]["area_id"]);
+                                $("#c1").append(option);
+                            }
+                            }else{
+                              $("#c1").append("<option value='0'>没有相应城市信息</option>");
+                            }
+                            });
+                          });
+                        </script>
+                        <script>
+                          $("#bankform").validate({
+                            rules: {
+                            new_label:"required",
+                            bank:"required",
+                            province:"required",
+                            city:"required",
+                            account:{required:true,
+                                 rangelength:[16,19]
+                                 }
+                              },
+                              messages: {
+                            bank:"请选择银行",
+                            province:"请选择有效省份",
+                            city:"请选择有效城市/区",
+                            account:{required:"请输入银行卡号",
+                                 rangelength:"请输入有效卡号"}
+                              },
+                            submitHandler:function(form){
+                                  ajax_submit_form(form)
+                                  return false;
+                              },
+                              invalidHandler: function() {  //不通过回调
+                                  return false;
+                              }
+                          });
+                        </script>
+                        <!-- <span id="showMsg_address" style="color:red;">最多添加10条提款地址</span> -->
+                      </li>
+                    </ul>
+                </div>
+              </td>
+            </tr>
+            <tr style="display:none;" id="phone_alert" align="right">
+              <td colspan="4">
+                  <span style="color:#f00;">系统已拨打您的手机告知验证码，请输入验证码</span>
+                  <input class="verify_text" id="phone_code_bank" type="text">
+                  <input class="verify" id="add_bankcards" onclick="cnyOut.finaddAddress()" value="确认" type="button">
+              </td>
+          </tr>
+          </tbody>
+    </table>
+    <div style="margin:0 auto;max-width: 640px;
+    min-width: 240px;width:95%;">
+      <input class="addition" value="确认绑定" type="submit">
+    </div>
+</body>
+</html>
